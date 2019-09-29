@@ -6,26 +6,25 @@ const defaultWrapper = {
   justifyContent: 'center',
   alignItems: 'center',
 
-  paddingHorizontal: variables.mtdHSpacingL,
-  paddingVertical: variables.mtdVSpacingM,
+  paddingHorizontal: variables.mainHSpacingL,
+  paddingVertical: variables.mainVSpacingM,
 
   borderWidth: StyleSheet.hairlineWidth,
-  borderColor: variables.mtdBorderColorDarker,
-  borderRadius: variables.buttonBorderRadius,
+  borderColor: variables.mainBorderColorDarker,
 
   backgroundColor: '#fff',
   overflow: 'hidden'
 }
 
 const defaultText = {
-  fontSize: variables.mtdFontSizeM,
-  color: variables.mtdGrayBase
+  fontSize: variables.mainFontSizeM,
+  color: variables.mainGrayBase
 }
 
 const primaryWrapper = {
   ...defaultWrapper,
-  borderColor: variables.mtdBrandPrimary,
-  backgroundColor: variables.mtdBrandPrimary
+  borderColor: variables.mainBrandPrimary,
+  backgroundColor: variables.mainBrandPrimary
 }
 
 const primaryText = {
@@ -33,59 +32,26 @@ const primaryText = {
   color: '#ffffff'
 }
 
-const dangerWrapper = {
+const secondaryWrapper = {
   ...defaultWrapper,
-  borderColor: variables.mtdBrandDanger,
-  backgroundColor: variables.mtdBrandDanger
+  borderColor: variables.mainBrandSecondary,
+  backgroundColor: variables.mainBrandSecondary
 }
 
-const dangerText = {
+const secondaryText = {
   ...defaultText,
   color: '#ffffff'
 }
 
-const warningWrapper = {
+const disabledWrapper = {
   ...defaultWrapper,
-  borderColor: variables.mtdBrandWarning,
-  backgroundColor: variables.mtdBrandWarning
+  borderColor: variables.mainGrayLightest,
+  backgroundColor: variables.mainGrayLightest
 }
 
-const warningText = {
+const disabledText = {
   ...defaultText,
-  color: '#ffffff'
-}
-
-const successWrapper = {
-  ...defaultWrapper,
-  borderColor: variables.mtdBrandSuccess,
-  backgroundColor: variables.mtdBrandSuccess
-}
-
-const successText = {
-  ...defaultText,
-  color: '#ffffff'
-}
-
-const infoWrapper = {
-  ...defaultWrapper,
-  borderColor: variables.mtdBrandInfo,
-  backgroundColor: variables.mtdBrandInfo
-}
-
-const infoText = {
-  ...defaultText,
-  color: '#ffffff'
-}
-
-const textWrapper = {
-  ...defaultWrapper,
-  borderColor: 'transparent',
-  backgroundColor: 'transparent'
-}
-
-const textText = {
-  ...defaultText,
-  color: variables.mtdBrandInfo
+  color: variables.mainGrayLight
 }
 
 export default StyleSheet.create({
@@ -95,18 +61,9 @@ export default StyleSheet.create({
   primaryWrapper,
   primaryText,
 
-  dangerWrapper,
-  dangerText,
+  secondaryWrapper,
+  secondaryText,
 
-  successWrapper,
-  successText,
-
-  warningWrapper,
-  warningText,
-
-  infoWrapper,
-  infoText,
-
-  textWrapper,
-  textText
+  disabledWrapper,
+  disabledText,
 } as any)

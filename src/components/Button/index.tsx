@@ -35,7 +35,7 @@ export interface ButtonProps {
   style?: ViewStyle | ViewStyle[]
   textStyle?: TextStyle | TextStyle[]
   textColorInverse?: boolean
-  type?: 'default' | 'primary' | 'danger' | 'info' | 'success' | 'warning' | 'text'
+  type?: 'default' | 'primary'| 'secondary' | 'disabled'
   size?: 'sm' | 'md' | 'lg'
   children?: any
   disabled?: boolean
@@ -74,21 +74,19 @@ export class Button extends React.Component<ButtonProps, any> {
     const styleWrapper = buttonStyles[type + 'Wrapper'] || buttonStyles.defaultWrapper
     const styleText = buttonStyles[type + 'Text'] || buttonStyles.defaultText
 
-    const inverseStyle = textColorInverse && type !== 'default' && type !== 'text' ? { color: variables.mtdGrayBase } : {}
+    const inverseStyle = textColorInverse && type !== 'default' ? { color: variables.mainGrayBase } : {}
 
     return (
       <TouchableOpacity
         style={[
           styleWrapper,
           {
-            opacity: disabled ? variables.buttonActiveOpacity : 1,
             ...(paddingMap[size] || paddingMap['md'])
           },
           style
         ]}
         disabled={disabled}
         onPress={() => this.handlePress()}
-        activeOpacity={disabled ? 1 : variables.buttonActiveOpacity}
       >
 
         {

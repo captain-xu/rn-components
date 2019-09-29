@@ -1,162 +1,78 @@
-import { StyleSheet, Platform } from 'react-native'
+import { StyleSheet } from 'react-native'
 
 // 品牌色
-const mtdBrandColors = {
-  mtdBrandPrimary: '#ffd800',
-  mtdBrandPrimaryDark: '#FFA000',
-  mtdBrandSuccess: '#61cb28',
-  mtdBrandWarning: '#ff8400',
-  mtdBrandDanger: '#f23244',
-  mtdBrandInfo: '#188afa'
+const mainBrandColors = {
+  mainBrandPrimary: '#FF542A',
+  mainBrandPrimaryDark: '#FF3B2D',
+  mainBrandPrimaryLight: '#FF5E40',
+  mainBrandSecondary: '#FF542A',
+  mainBrandSecondaryYellow: '#FF9634',
+  mainBrandSecondaryGray: '#9E9E9E',
+  mainBrandSecondaryBlue: '#1DB6F0',
 }
 // 灰度
-const mtdGrayColors = {
-  mtdGrayBase: '#111',    // 正文，主标题
-  mtdGrayDarker: '#333',  // 副标题
-  mtdGrayDark: '#555',    // 补充、提示信息
-  mtdGray: '#888',        // 取消按钮等
-  mtdGrayLight: '#aaaaaa',
-  mtdGrayLighter: '#cccccc',
-  mtdGrayLightest: '#ebebeb'
+const mainGrayColors = {
+  mainGrayBase: '#333',    // 正文，主标题
+  mainGrayLight: '#9E9E9E',  // 副标题
+  mainGrayLighter: '#C8C8C8',
+  mainGrayLightest: '#EAEAEA'
 }
 // 背景色
-const mtdFillColors = {
-  mtdFillBase: '#ffffff',
-  mtdFillGray: '#F5F5F5',
-  mtdFillBody: '#F8F8F8',
-  mtdFillBackdrop: 'rgba(0, 0, 0, .3)',
-  mtdFillBackdropDark: 'rgba(0, 0, 0, 0.75)'
+const mainFillColors = {
+  mainFillBase: '#ffffff',
+  mainFillGray: '#F3F3F3',
+  mainFillColored: '#FFFAF9',
 }
 // 字体尺寸
-const mtdFontSize = {
-  mtdFontSizeXS: 10,
-  mtdFontSizeS: 12,
-  mtdFontSizeM: 14,
-  mtdFontSizeL: 16,
-  mtdFontSizeXL: 18,
-  mtdFontSizeX2L: 20,
-  mtdFontSizeX3L: 22,
-  mtdFontSizeX4L: 24,
-  mtdFontSizeX5L: 28
+const mainFontSize = {
+  mainFontSizeXS: 10,
+  mainFontSizeS: 12,
+  mainFontSizeM: 14,
+  mainFontSizeL: 16,
+  mainFontSizeXL: 20,
+  mainFontSizeX2L: 27,
 }
 
-const mtdSpacing = {
+const mainSpacing = {
   // 水平间距
-  mtdHSpacingS: 4,
-  mtdHSpacingM: 8,
-  mtdHSpacingL: 12,
-  mtdHSpacingXL: 16,
-  mtdHSpacingX2L: 20,
+  mainHSpacingS: 4,
+  mainHSpacingM: 8,
+  mainHSpacingL: 12,
+  mainHSpacingXL: 16,
+  mainHSpacingX2L: 20,
   // 垂直间距
-  mtdVSpacingXS: 2,
-  mtdVSpacingS: 4,
-  mtdVSpacingM: 8,
-  mtdVSpacingL: 10,
-  mtdVSpacingXL: 12,
-  mtdVSpacingX2L: 16,
-  mtdVSpacingX3L: 18,
-  mtdVSpacingX4L: 20
+  mainVSpacingXS: 2,
+  mainVSpacingS: 4,
+  mainVSpacingM: 8,
+  mainVSpacingL: 10,
+  mainVSpacingXL: 12,
+  mainVSpacingX2L: 16,
+  mainVSpacingX3L: 18,
+  mainVSpacingX4L: 20
 }
 // 圆角
-const mtdRadius = {
-  mtdRadiusXS: 2,
-  mtdRadiusS: 4,
-  mtdRadiusM: 6,
-  mtdRadiusL: 8
+const mainRadius = {
+  mainRadiusXS: 2,
+  mainRadiusS: 4,
+  mainRadiusM: 6,
+  mainRadiusL: 8
 }
-const mtdBorder = {
-  mtdBorderWidth: StyleSheet.hairlineWidth,
-  mtdBorderColor: '#F5F5F5',
-  mtdBorderColorDark: '#e5e5e5',
-  mtdBorderColorDarker: '#d5d5d5'
-}
-
-const mtdOpacity = 0.3
-const mtdEnableAnimated = true
-/**
- * Button 组件
- */
-const button = {
-  buttonEnableAnimated: Platform.OS === 'ios',
-  buttonBorderRadius: mtdRadius.mtdRadiusXS,
-  buttonActiveOpacity: mtdOpacity,
-
-  buttonLFontSize: mtdFontSize.mtdFontSizeXL,
-  buttonLHSpacing: 50,
-  buttonLVSpacing: 14,
-
-  buttonMFontSize: mtdFontSize.mtdFontSizeL,
-  buttonMHSpacing: 46,
-  buttonMVSpacing: 12,
-
-  buttonSFontSize: mtdFontSize.mtdFontSizeM,
-  buttonSHSpacing: mtdSpacing.mtdHSpacingXL,
-  buttonSVSpacing: 8
-}
-
-/**
- * Form 组件
- */
-const form = {
-}
-
-const formItem = {
-  formItemHSpacing: mtdSpacing.mtdHSpacingXL,
-  formItemVSpacing: 18,
-
-  formItemLabelWidth: 90,
-  formItemLabelMarginRight: 32
-}
-
-/**
- * Input组件
- */
-const input = {
-  // input组件安全区域 高度
-  inputTextFontSize: 14,
-  inputAreaHeight: 30
-}
-
-
-const radio = {
-  radioEnableAnimated: mtdEnableAnimated
-}
-
-const checkbox = {
-  checkboxEnableAnimated: mtdEnableAnimated
-}
-
-const topview = {
-  topviewZIndex: 100
-}
-
-const slider = {
-}
-
-const dropdown = {
-  dropdownEnableAnimated: mtdEnableAnimated
+const mainBorder = {
+  mainBorderWidth: StyleSheet.hairlineWidth,
+  mainBorderColor: '#EAEAEA',
+  mainBorderColorLight: '#EFEFEF',
+  mainBorderColorDark: '#E0E0E0',
+  mainBorderColorDarker: '#DFDFDF'
 }
 
 const variables: any = {
-  ...mtdBrandColors,
-  ...mtdGrayColors,
-  ...mtdFillColors,
-  ...mtdFontSize,
-  ...mtdSpacing,
-  ...mtdRadius,
-  ...mtdBorder,
-  mtdOpacity,
-  mtdEnableAnimated,
-
-  ...button,
-  ...form,
-  ...formItem,
-  ...input,
-  ...radio,
-  ...checkbox,
-  ...slider,
-  ...topview,
-  ...dropdown
+  ...mainBrandColors,
+  ...mainGrayColors,
+  ...mainFillColors,
+  ...mainFontSize,
+  ...mainSpacing,
+  ...mainRadius,
+  ...mainBorder,
 }
 
 
