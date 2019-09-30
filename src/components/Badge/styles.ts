@@ -6,7 +6,9 @@ const defaultWrapper = {
   justifyContent: 'center',
   alignItems: 'center',
 
-  padding: variables.mainSpacingSM,
+  height: 16,
+
+  paddingHorizontal: variables.mainSpacingSM,
 
   backgroundColor: variables.mainBrandPrimary,
 }
