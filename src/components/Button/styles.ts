@@ -6,8 +6,8 @@ const defaultWrapper = {
   justifyContent: 'center',
   alignItems: 'center',
 
-  paddingHorizontal: variables.mainHSpacingL,
-  paddingVertical: variables.mainVSpacingM,
+  paddingHorizontal: variables.mainSpacingL,
+  paddingVertical: variables.mainSpacingM,
 
   borderWidth: StyleSheet.hairlineWidth,
   borderColor: variables.mainBorderColorDarker,
@@ -32,6 +32,17 @@ const primaryText = {
   color: '#ffffff'
 }
 
+const primaryHollowWrapper = {
+  ...defaultWrapper,
+  borderColor: variables.mainBrandPrimary,
+  backgroundColor: 'transparent'
+}
+
+const primaryHollowText = {
+  ...defaultText,
+  color: variables.mainBrandPrimary
+}
+
 const secondaryWrapper = {
   ...defaultWrapper,
   borderColor: variables.mainBrandSecondary,
@@ -41,6 +52,17 @@ const secondaryWrapper = {
 const secondaryText = {
   ...defaultText,
   color: '#ffffff'
+}
+
+const secondaryHollowWrapper = {
+  ...defaultWrapper,
+  borderColor: variables.mainBrandSecondary,
+  backgroundColor: 'transparent'
+}
+
+const secondaryHollowText = {
+  ...defaultText,
+  color: variables.mainBrandSecondary
 }
 
 const disabledWrapper = {
@@ -54,16 +76,33 @@ const disabledText = {
   color: variables.mainGrayLight
 }
 
+const disabledHollowWrapper = {
+  ...defaultWrapper,
+  borderColor: variables.mainGrayLightest,
+  backgroundColor: 'transparent'
+}
+
+const disabledHollowText = {
+  ...defaultText,
+  color: variables.mainGrayLightest
+}
+
 export default StyleSheet.create({
   defaultWrapper,
   defaultText,
 
   primaryWrapper,
   primaryText,
+  primaryHollowWrapper,
+  primaryHollowText,
 
   secondaryWrapper,
   secondaryText,
+  secondaryHollowWrapper,
+  secondaryHollowText,
 
   disabledWrapper,
   disabledText,
+  disabledHollowWrapper,
+  disabledHollowText,
 } as any)

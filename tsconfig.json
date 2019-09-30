@@ -5,18 +5,16 @@
     "declaration": true,
     "target": "esnext",
     "module": "esnext",
-    "sourceMap": true,
+    "sourceMap": false,
     "experimentalDecorators": true,
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "strict": false,
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "outDir": "./distExamples"
+    "baseUrl": "."
   },
   "include": [
-    "./examples/**/*",
     "./src/**/*"
   ]
 }

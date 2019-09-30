@@ -7,7 +7,6 @@ import {
   TextStyle
 } from 'react-native'
 import buttonStyles from './styles'
-export { buttonStyles }
 import variables from '../../common/styles/variables'
 
 const fontSizeMap = {
@@ -18,8 +17,8 @@ const fontSizeMap = {
 
 const paddingMap = {
   lg: {
-    paddingHorizontal: variables.buttonLHSpacing,
-    paddingVertical: variables.buttonLVSpacing
+    paddingHorizontal: variables.mainSpacingX6L,
+    paddingVertical: variables.mainSpacingX4L
   },
   md: {
     paddingHorizontal: variables.mainSpacingX4L,
@@ -34,11 +33,11 @@ const paddingMap = {
 export interface ButtonProps {
   style?: ViewStyle | ViewStyle[]
   textStyle?: TextStyle | TextStyle[]
-  textColorInverse?: boolean
   type?: 'default' | 'primary'| 'secondary' | 'disabled'
   size?: 'sm' | 'md' | 'lg'
   children?: any
   disabled?: boolean
+  hollow?: boolean
   onPress?: Function
 }
 
@@ -46,10 +45,10 @@ export class Button extends React.Component<ButtonProps, any> {
   static defaultProps = {
     style: {},
     textStyle: {},
-    textColorInverse: false,
     type: 'default',
     size: 'md',
     disabled: false,
+    hollow: false,
     onPress: null,
   }
 
@@ -69,12 +68,10 @@ export class Button extends React.Component<ButtonProps, any> {
   }
 
   render () {
-    const { type, disabled, style, textStyle, size , children, textColorInverse } = this.props
+    const { type, disabled, style, textStyle, size, children, hollow } = this.props
 
-    const styleWrapper = buttonStyles[type + 'Wrapper'] || buttonStyles.defaultWrapper
-    const styleText = buttonStyles[type + 'Text'] || buttonStyles.defaultText
-
-    const inverseStyle = textColorInverse && type !== 'default' ? { color: variables.mainGrayBase } : {}
+    const styleWrapper = buttonStyles[type + `${hollow ? 'Hollow' : ''}Wrapper`] || buttonStyles.defaultWrapper
+    const styleText = buttonStyles[type + `${hollow ? 'Hollow' : ''}Text`] || buttonStyles.defaultText
 
     return (
       <TouchableOpacity
@@ -97,7 +94,6 @@ export class Button extends React.Component<ButtonProps, any> {
                 {
                   fontSize: fontSizeMap[size] || fontSizeMap['md']
                 },
-                inverseStyle,
                 textStyle
               ]}
             >{children}</Text>
