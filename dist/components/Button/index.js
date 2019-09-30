@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import buttonStyles from './styles';
-export { buttonStyles };
 import variables from '../../common/styles/variables';
 const fontSizeMap = {
     lg: variables.mainFontSizeXL,
@@ -10,8 +9,8 @@ const fontSizeMap = {
 };
 const paddingMap = {
     lg: {
-        paddingHorizontal: variables.buttonLHSpacing,
-        paddingVertical: variables.buttonLVSpacing
+        paddingHorizontal: variables.mainSpacingX6L,
+        paddingVertical: variables.mainSpacingX4L
     },
     md: {
         paddingHorizontal: variables.mainSpacingX4L,
@@ -36,10 +35,9 @@ export class Button extends React.Component {
         }
     }
     render() {
-        const { type, disabled, style, textStyle, size, children, textColorInverse } = this.props;
-        const styleWrapper = buttonStyles[type + 'Wrapper'] || buttonStyles.defaultWrapper;
-        const styleText = buttonStyles[type + 'Text'] || buttonStyles.defaultText;
-        const inverseStyle = textColorInverse && type !== 'default' ? { color: variables.mainGrayBase } : {};
+        const { type, disabled, style, textStyle, size, children, hollow } = this.props;
+        const styleWrapper = buttonStyles[type + `${hollow ? 'Hollow' : ''}Wrapper`] || buttonStyles.defaultWrapper;
+        const styleText = buttonStyles[type + `${hollow ? 'Hollow' : ''}Text`] || buttonStyles.defaultText;
         return (React.createElement(TouchableOpacity, { style: [
                 styleWrapper,
                 {
@@ -51,7 +49,6 @@ export class Button extends React.Component {
                 {
                     fontSize: fontSizeMap[size] || fontSizeMap['md']
                 },
-                inverseStyle,
                 textStyle
             ] }, children))));
     }
@@ -59,10 +56,9 @@ export class Button extends React.Component {
 Button.defaultProps = {
     style: {},
     textStyle: {},
-    textColorInverse: false,
     type: 'default',
     size: 'md',
     disabled: false,
+    hollow: false,
     onPress: null,
 };
-//# sourceMappingURL=index.js.map

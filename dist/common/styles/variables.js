@@ -39,7 +39,8 @@ const mainSpacing = {
     mainSpacingXL: 12,
     mainSpacingX2L: 16,
     mainSpacingX3L: 18,
-    mainSpacingX4L: 20
+    mainSpacingX4L: 20,
+    mainSpacingX6L: 24
 };
 // 圆角
 const mainRadius = {
@@ -64,10 +65,4 @@ const variables = {
     ...mainRadius,
     ...mainBorder,
 };
-function useTheme(args = {}) {
-    Object.assign(variables, args);
-    return variables;
-}
 export default variables;
-export { useTheme };
-//# sourceMappingURL=variables.js.map
