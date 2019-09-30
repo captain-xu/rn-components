@@ -34,6 +34,7 @@ const mainFontSize = {
 const mainSpacing = {
     mainSpacingXS: 2,
     mainSpacingS: 4,
+    mainSpacingSM: 6,
     mainSpacingM: 8,
     mainSpacingL: 10,
     mainSpacingXL: 12,
