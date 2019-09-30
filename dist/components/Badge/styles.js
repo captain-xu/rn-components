@@ -7,6 +7,7 @@ const defaultWrapper = {
     height: 16,
     paddingHorizontal: variables.mainSpacingSM,
     backgroundColor: variables.mainBrandPrimary,
+    borderRadius: variables.mainRadiusL
 };
 const defaultText = {
     fontSize: variables.mainFontSizeS,

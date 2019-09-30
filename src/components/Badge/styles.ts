@@ -11,6 +11,7 @@ const defaultWrapper = {
   paddingHorizontal: variables.mainSpacingSM,
 
   backgroundColor: variables.mainBrandPrimary,
+  borderRadius: variables.mainRadiusL
 }
 
 const defaultText = {
