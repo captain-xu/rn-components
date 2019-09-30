@@ -5,7 +5,7 @@ const mainBrandColors = {
   mainBrandPrimary: '#FF542A',
   mainBrandPrimaryDark: '#FF3B2D',
   mainBrandPrimaryLight: '#FF5E40',
-  mainBrandSecondary: '#FF542A',
+  mainBrandSecondary: '#383838',
   mainBrandSecondaryYellow: '#FF9634',
   mainBrandSecondaryGray: '#9E9E9E',
   mainBrandSecondaryBlue: '#1DB6F0',
@@ -34,21 +34,14 @@ const mainFontSize = {
 }
 
 const mainSpacing = {
-  // 水平间距
-  mainHSpacingS: 4,
-  mainHSpacingM: 8,
-  mainHSpacingL: 12,
-  mainHSpacingXL: 16,
-  mainHSpacingX2L: 20,
-  // 垂直间距
-  mainVSpacingXS: 2,
-  mainVSpacingS: 4,
-  mainVSpacingM: 8,
-  mainVSpacingL: 10,
-  mainVSpacingXL: 12,
-  mainVSpacingX2L: 16,
-  mainVSpacingX3L: 18,
-  mainVSpacingX4L: 20
+  mainSpacingXS: 2,
+  mainSpacingS: 4,
+  mainSpacingM: 8,
+  mainSpacingL: 10,
+  mainSpacingXL: 12,
+  mainSpacingX2L: 16,
+  mainSpacingX3L: 18,
+  mainSpacingX4L: 20
 }
 // 圆角
 const mainRadius = {

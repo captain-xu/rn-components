@@ -11,9 +11,9 @@ export { buttonStyles }
 import variables from '../../common/styles/variables'
 
 const fontSizeMap = {
-  lg: variables.buttonLFontSize,
-  md: variables.buttonMFontSize,
-  sm: variables.buttonSFontSize
+  lg: variables.mainFontSizeXL,
+  md: variables.mainFontSizeL,
+  sm: variables.mainFontSizeM
 }
 
 const paddingMap = {
@@ -22,12 +22,12 @@ const paddingMap = {
     paddingVertical: variables.buttonLVSpacing
   },
   md: {
-    paddingHorizontal: variables.buttonMHSpacing,
-    paddingVertical: variables.buttonMVSpacing
+    paddingHorizontal: variables.mainSpacingX4L,
+    paddingVertical: variables.mainSpacingX2L
   },
   sm: {
-    paddingHorizontal: variables.buttonSHSpacing,
-    paddingVertical: variables.buttonSVSpacing
+    paddingHorizontal: variables.mainSpacingX2L,
+    paddingVertical: variables.mainSpacingXL
   }
 }
 
